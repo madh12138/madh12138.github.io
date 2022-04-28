@@ -4,12 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hello world一起步，从此走上不归路, 安远">
-    <meta name="description" content="Date By: 2022-4-26 9:39:06
-tips:
-基于hexo+github搭建个人博客
-
-首先你得准备node.js 、 git 、 github个人账号写博客内容不寒颤的话，再装一个vscode，手敲vim命令修改文件q">
+    <meta name="keywords" content="学习Git版本控制笔记, 安远">
+    <meta name="description" content="一、Git工作流
+四大板块(1)工作目录存放我们正在写的代码
+(2)暂存区暂时保存待提交的内容
+(3)本地仓库位于我们电脑上的一个版本控制仓库
+(4)远程仓库位于服务器上的版本控制仓库
+二、创建本地仓库2.1初始化为本地仓库git init">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +24,7 @@ tips:
 
     
 
-    <title>hello world一起步，从此走上不归路 | 安远</title>
+    <title>学习Git版本控制笔记 | 安远</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -333,12 +334,12 @@ tips:
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hello world一起步，从此走上不归路</h1>
+                    <h1 class="description center-align post-title">学习Git版本控制笔记</h1>
                 </div>
             </div>
         </div>
@@ -454,8 +455,12 @@ tips:
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
                             </a>
                         
                     </div>
@@ -470,7 +475,7 @@ tips:
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-25
+                    2022-04-28
                 </div>
                 
 
@@ -494,79 +499,72 @@ tips:
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Date By: 2022-4-26 9:39:06</p>
-<h3 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h3><blockquote>
-<p>基于hexo+github搭建个人博客</p>
-</blockquote>
-<h3 id="首先你得准备node-js-、-git-、-github个人账号"><a href="#首先你得准备node-js-、-git-、-github个人账号" class="headerlink" title="首先你得准备node.js 、 git 、 github个人账号"></a>首先你得准备<code>node.js</code> 、 <code>git</code> 、 <code>github</code>个人账号</h3><p>写博客内容不寒颤的话，再装一个<code>vscode</code>，手敲<code>vim</code>命令修改文件qio实很头疼。</p>
-<p>以管理员身份运行<code>cmd</code>检查<code>node.js</code>是否配置完成，代码如下</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">node</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>检查<code>git</code>是否配置完成，代码如下</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> --version <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>主要是用到<code>hexo</code>工具，在<code>cmd</code>管理员命令窗口安装<code>hexo</code>工具，代码如下</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>检查hexo工具是否安装成功</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>检查node.js下的一款安装工具npm是否配置完成，代码如下(安装完node基本就能查出版本号)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="一、Git工作流"><a href="#一、Git工作流" class="headerlink" title="一、Git工作流"></a>一、Git工作流</h2><p><img src="https://s2.loli.net/2022/01/22/VWYkdFjNil5A6L1.jpg" alt="1.jpg"></p>
+<h3 id="四大板块"><a href="#四大板块" class="headerlink" title="四大板块"></a>四大板块</h3><h4 id="1-工作目录"><a href="#1-工作目录" class="headerlink" title="(1)工作目录"></a>(1)工作目录</h4><p>存放我们正在写的代码</p>
+<h4 id="2-暂存区"><a href="#2-暂存区" class="headerlink" title="(2)暂存区"></a>(2)暂存区</h4><p>暂时保存待提交的内容</p>
+<h4 id="3-本地仓库"><a href="#3-本地仓库" class="headerlink" title="(3)本地仓库"></a>(3)本地仓库</h4><p>位于我们电脑上的一个版本控制仓库</p>
+<h4 id="4-远程仓库"><a href="#4-远程仓库" class="headerlink" title="(4)远程仓库"></a>(4)远程仓库</h4><p>位于服务器上的版本控制仓库</p>
+<h2 id="二、创建本地仓库"><a href="#二、创建本地仓库" class="headerlink" title="二、创建本地仓库"></a>二、创建本地仓库</h2><h3 id="2-1初始化为本地仓库"><a href="#2-1初始化为本地仓库" class="headerlink" title="2.1初始化为本地仓库"></a>2.1初始化为本地仓库</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> init   <span class="token comment">#可以创建多个本地仓库</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-2查看当前仓库状态"><a href="#2-2查看当前仓库状态" class="headerlink" title="2.2查看当前仓库状态"></a>2.2查看当前仓库状态</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> status     <span class="token comment">#查看当前，如果有未追踪的文件则需要追踪</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-3添加为追踪文件"><a href="#2-3添加为追踪文件" class="headerlink" title="2.3添加为追踪文件"></a>2.3添加为追踪文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> text.txt      <span class="token comment">#添加完成就放到了暂存区等待提交</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-4这提交到本地仓库"><a href="#2-4这提交到本地仓库" class="headerlink" title="2.4这提交到本地仓库"></a>2.4这提交到本地仓库</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -m <span class="token string">'描述'</span>    <span class="token comment">#这个版本就提交到git的本地仓库了</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-5修改文件内容提交"><a href="#2-5修改文件内容提交" class="headerlink" title="2.5修改文件内容提交"></a>2.5修改文件内容提交</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -a -m <span class="token string">'备注'</span>   <span class="token comment">#如果修改了已经提交过的文件内容，再次提交就使用这个命令</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-6查看提交日志"><a href="#2-6查看提交日志" class="headerlink" title="2.6查看提交日志"></a>2.6查看提交日志</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> log    <span class="token comment">#可以查看提交日志，谁在什么时候提交的，也能查看提交ID</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-7查看一条日志"><a href="#2-7查看一条日志" class="headerlink" title="2.7查看一条日志"></a>2.7查看一条日志</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> log --all --oneline --graph   <span class="token comment">#图形化查看一条日志的所有操作</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-8改变初始化提交"><a href="#2-8改变初始化提交" class="headerlink" title="2.8改变初始化提交"></a>2.8改变初始化提交</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> reset --hard conmmitID   <span class="token comment">#改变初始化提交为哪一次提交的版本</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-9查看所有分支的所有操作记录"><a href="#2-9查看所有分支的所有操作记录" class="headerlink" title="2.9查看所有分支的所有操作记录"></a>2.9查看所有分支的所有操作记录</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> reflog       <span class="token comment">#查看所有分支的所有操作记录 </span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>此时工具的准备工作完成啦！！！</p>
-<h3 id="第一步：搭建仓库"><a href="#第一步：搭建仓库" class="headerlink" title="第一步：搭建仓库"></a>第一步：搭建仓库</h3><p><code>github</code>网页注册账号，自行创建一个<code>respository</code>，注意：仓库名为<code>github账户名+.github.io</code><br>在b站搜索<code>github</code>创建仓库教学，一抓一大把，这里不做缀叙，以我的为例，仓库名是：madh12138.github.io<br><code>github</code>仓库作用就是充当远程服务器，存储我们的博客文件，让所有人可以去访问。主要原因是这样可以白嫖，不需要去购买云服务器，只是访问速度会受到限制，毕竟github是国外的网站</p>
-<h3 id="第二步：生成SSH-Keys"><a href="#第二步：生成SSH-Keys" class="headerlink" title="第二步：生成SSH Keys"></a>第二步：生成<code>SSH Keys</code></h3><p>随便进入一个文件夹当中，随便进，不要管，因为生成SSH秘钥跟你在哪个文件下操作没有关系。一定要在文件夹里面右击选择git bash打开git命令窗口，直接敲如下代码</p>
-<p>注意：双引号下面的是你的<code>github</code>注册的邮件地址，自行修改，github的账户名跟邮箱号很重要！</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ssh-keygen -t rsa -C <span class="token string">"3052634541@qq.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>敲完按四次回车，这时命令就会在电脑本地新建一个文件夹，文件夹默认在C盘下面的users&#x2F;administrator&#x2F;.ssh文件<br>打开<code>ssh</code>文件，会生成两个文件，分别是 <code>id_rsa</code> 和 <code>id_rsa.pud</code>  两个文件<br>点开 <code>id_rsa.pud</code> 文件，复制出秘钥，点开<code>github</code>网页的个人头像的<code>settings</code>，点到<code>SSH and GPG keys</code>，新建一个秘钥，秘钥的title随便取名，秘钥粘贴上去，点击 <code>Add SSH Key</code> 就创建成功了！</p>
-<p>然后要确定我们是否绑定成功，回到刚才那个git命令窗口，输入以下命令，不需修改，照着输入即可。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ssh</span>  -T git@github.com  //测试ssh是否绑定成功<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>输入命令敲回车，窗口会询问<code>yes / no[fingerprint]?</code>，不用担心，手敲yes，回车即可。<br>出现successfuly authenticated 就表示绑定<code>SSH</code>成功！</p>
-<h3 id="第三步，生成hexo文件"><a href="#第三步，生成hexo文件" class="headerlink" title="第三步，生成hexo文件"></a>第三步，生成hexo文件</h3><p>新建一个文件夹，文件夹名字随意取，在哪个盘新建都行，你记得地址就行，以后这就作为你博客项目的本地文件夹了，新建完成是一个空的文件夹，点进去，右击选择<code>git bash</code>，敲以下命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo init //初始化hexo，成功后会发现文件夹多了好多文件，就是hexo文件,可能会出现链接超时的情况<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>过程中可能会出现连接失败的情况，不要紧，因为<code>github</code>是国外的网站，链接不稳定，再次敲相同代码重试即可。一般第二次第三次就可以初始化啦！</p>
-<p>初始化成功会提示：start blogging with Hexo！且发现文件夹多出好多文件，继续敲命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo s     <span class="token comment">#静态生成本地的hexo页面</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><code>hexo s</code>命令敲完回车就会有一个本地的访问地址，比如我的出现的是<a target="_blank" rel="noopener" href="http://localhost:4000/%EF%BC%8C%E5%A4%8D%E5%88%B6%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E5%95%A6">http://localhost:4000/，复制地址，就可以访问啦</a><br>(复制的时候不要<code>Ctrl+C</code>,这是停掉本地生成页面服务的快捷键,你需要选中右击点击Copy,当然如果你手速较快，已经停止服务了，页面显示404错误，问题不大，重新输入<code>hexo s</code>即可)</p>
-<p>此时本地的博客搭建完成！本地搭建完成剩下就是发布到<code>github</code>服务器。</p>
-<blockquote>
-<p>如果hexo s命令没有运行成功的话，那就是没装服务的原因，在git面板输入以下命令:</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo server   <span class="token comment">#装server服务，再运行hexo server或者hexo s就可以了。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>顺带把hexo deploy的依赖包也装上吧，代码如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="三、新建分支"><a href="#三、新建分支" class="headerlink" title="三、新建分支"></a>三、新建分支</h2><h3 id="3-1查看当前所在分支"><a href="#3-1查看当前所在分支" class="headerlink" title="3.1查看当前所在分支"></a>3.1查看当前所在分支</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> branch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-2创建新的分支"><a href="#3-2创建新的分支" class="headerlink" title="3.2创建新的分支"></a>3.2创建新的分支</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> branch 分支名 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-3删除分支"><a href="#3-3删除分支" class="headerlink" title="3.3删除分支"></a>3.3删除分支</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> branch -d 分支名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-4切换分支"><a href="#3-4切换分支" class="headerlink" title="3.4切换分支"></a>3.4切换分支</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout 分支名   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="第四步，将本地博客项目上传到github仓库。"><a href="#第四步，将本地博客项目上传到github仓库。" class="headerlink" title="第四步，将本地博客项目上传到github仓库。"></a>第四步，将本地博客项目上传到github仓库。</h3><p>在生成的<code>hexo</code>众多文件里面，找到 <code>_config.yml</code>文件，直接在文件夹中打开编辑也行，在<code>git bash</code>命令窗口敲<code>vim</code>命令也行,当然这需要你有Linux命令基础，我建议直接在文件夹点开编辑就好，打开方式选记事本，vscode打开都可。<br>修改 <code>_config.yml</code>文件夹的deploy，修改为以下内容:(直接拉到最下面)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deploy:
-  type: <span class="token function">git</span>
-  repository： clone仓库地址     <span class="token comment">#仓库http地址，clone出来，加上.git</span>
-  branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>注意：冒号<code>：</code>后面必须输入一个空格。<br>      冒号<code>：</code>后面必须输入一个空格。<br>      冒号<code>：</code>后面必须输入一个空格。<br><code>clone</code>仓库地址： 就是你在<code>github上面新建仓库的网址+.git</code>。仓库url复制克隆出来大家都会吧，不会的自行百度，很简单的。<br><code>type</code> 和 <code>branch</code> 两个参数的值都是一样的，大家自行照抄就好啦。</p>
-<p>修改完成就进行一下操作</p>
-<p>在<code>hexo</code>项目的文件夹，右击选择 <code>git bash</code>, 输入以下命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo g   <span class="token comment">#生成页面的命令</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>生成页面命令敲完回车等待完成，继续输入以下命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo d  <span class="token comment">#上传到github 的命令 这是最关键的一步</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>输入完hexo d敲回车，会验证你的github账号，出来一个小输入框，要求输入你的username，输入github用户名即可。<br>用户名输完会马上要求输入密码</p>
-<p>注意！！！！！！！！！！！！！！！！！！！！！！！！！！！</p>
-<p>此时要求输入的密码并非github登录密码!!!<br>此时要求输入的密码并非github登录密码!!!<br>此时要求输入的密码并非github登录密码!!!</p>
-<p>密码先不要急着输入，小输入框拉到一边，</p>
-<p>我们回到<code>github</code>网页</p>
-<p>点击到<code>github</code>网页，点击头像的<code>Settings</code>，点击<code>Developr Settings</code>，点击<code>Personal access tokens</code></p>
-<p>添加一个令牌，令牌名字随便取，令牌的权限建议全部勾选，影响不大，然后点击下面的generate token</p>
-<p>就会出现令牌，很长，复制粘贴是不行的，必须纯手打进那个小输入框，自行手动输入。</p>
-<p>注意：令牌很重要！！！<br>     令牌很重要！！！<br>     令牌很重要！！！<br>一定要把令牌复制出来放到一个记事本或者文档里面，离开页面以后就再也查看不到令牌了，这也是github出于安全性能方面，2021年的大更新，所以令牌要复制出来保存好。下次再发布到github上时还是需要纯手打输入令牌。（肠子都悔青了，令牌自己都忘记复制出来了）。</p>
-<p>令牌手打输入到小输入框内，点击OK，此时就会将本地的<code>hexo</code>项目全部上传至<code>github</code>仓库，回到<code>github</code>仓库即可查看。</p>
-<h3 id="如果输入-hexo-d-出现以下错误："><a href="#如果输入-hexo-d-出现以下错误：" class="headerlink" title="如果输入 hexo d 出现以下错误："></a>如果输入 <code>hexo d</code> 出现以下错误：</h3><p>fatal: unable to auto-detect email address (got ‘z@DESKTOP-DPE3A08.(none)’)<br>error: src refspec HEAD does not match any<br>error: failed to push some refs to ‘<a target="_blank" rel="noopener" href="https://github.com/seekwhale13/seekwhale13.ithub.io.git&#39;">https://github.com/seekwhale13/seekwhale13.ithub.io.git&#39;</a></p>
-<h3 id="可以先运行以下代码："><a href="#可以先运行以下代码：" class="headerlink" title="可以先运行以下代码："></a>可以先运行以下代码：</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.email <span class="token string">"你的邮箱"</span>
-<span class="token function">git</span> config --global user.name <span class="token string">"你的gihub名字"</span>  <span class="token comment">#注意有两个`-`</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>例如我上传失败，输入以下命令回车，然后重新上传(hexo deploy)即可：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.email <span class="token string">"3052634541@qq.com"</span>
-<span class="token function">git</span> config --global user.name <span class="token string">"madh12138"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="四、合并分支"><a href="#四、合并分支" class="headerlink" title="四、合并分支"></a>四、合并分支</h2><p>我们也可以将两个分支更新的内容最终合并到同一个分支上<br>我们先切换回主分支</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后合并</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> merge 分支名   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果合并有冲突，查看哪里发生了冲突</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">diff</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cp4y1i7C7?p=2&share_source=copy_web">哔哩哔哩</a> 我就是按着这位B站大佬一步步搭建起来的</p>
-<p><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a>  不懂就问度娘，自行搜索</p>
-<h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>芜湖！！ 结束了，昨天下午弄了两个小时把个人博客搭建完成，一步一步来，基本没有什么错误，<code>hexo+github</code>搭建个人博客还是比较简单的，如果你搭建的过程中遇到什么问题可以提出来，大家一起交流交流，仓库名就是我的QQ号，欢迎添加。<br>虽然这个教学有点抽象，没有图片支撑相应的步骤具体操作，但是大家将就着看吧，昨天搭建的时候属实是忘记截图了。如果有兴趣的话欢迎来交流学习。</p>
-<blockquote>
-<h4 id="本文首次发布于2022年4月26号，转载请说明出处并附上本站网址！感谢。"><a href="#本文首次发布于2022年4月26号，转载请说明出处并附上本站网址！感谢。" class="headerlink" title="本文首次发布于2022年4月26号，转载请说明出处并附上本站网址！感谢。"></a>本文首次发布于2022年4月26号，转载请说明出处并附上本站网址！感谢。</h4></blockquote>
-<h3 id="最后，感谢阅读。"><a href="#最后，感谢阅读。" class="headerlink" title="最后，感谢阅读。"></a>最后，感谢阅读。</h3>
+<h2 id="五、变基分支"><a href="#五、变基分支" class="headerlink" title="五、变基分支"></a>五、变基分支</h2><p>除了直接合并分支，我们还可以进行变基操作，它跟合并不同，合并是分支回到主干的过程，而变基是直接修改分支开始的位置，比如我们希望将text变基到master上，那么test会将分支起点移动到master最后一次提交位置</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> rebase master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>变基后，test分支相当于同步了此前master分支的全部提交</p>
+<h2 id="六、优选"><a href="#六、优选" class="headerlink" title="六、优选"></a>六、优选</h2><p>我们还可以选择其它分支上的提交作用于当前分支，这种操作称为cherrypick</p>
+<pre class="line-numbers language-nash" data-language="nash"><code class="language-nash">git checkout test   #先切换到test分支
+git cherry-pick &lt;commit ID&gt;   #单独合并一个提交<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这里我们在master分支上创建一个新的文件，提交此次更新，接着通过cherry-pick的方式将此次更新作用于test分支上。</p>
+<h2 id="七、使用IDEA版本控制"><a href="#七、使用IDEA版本控制" class="headerlink" title="七、使用IDEA版本控制"></a>七、使用IDEA版本控制</h2><p>虽然前面学习了git命令行的使用方法，但是没有一个图形化界面，始终会感觉很抽象，所有再继续学习使用IDEA的版本控制</p>
+<p>打开IDEA后，找到版本控制模块，我们直接点击创建本地仓库，它会自动将当前项目的根目录作为我们的本地仓库，当我们编写的所有代码和项目目录下其它文件都可以进行版本控制</p>
+<p>我发现所有项目中正在编写的类文件全部变红了，也就是处于未追踪状态，接着我进行第一次初始化提交，提交之后我可以在下方看到所有本地仓库提交记录</p>
+<p>接着我来整合一下Web环境，创建新的类之后，IDEA会提示我们是否将文件添加Git，也就是是否放入暂存区并开启追踪，我们可以直接对比两次代码的相同和不同之处。</p>
+<h2 id="八、远程仓库"><a href="#八、远程仓库" class="headerlink" title="八、远程仓库"></a>八、远程仓库</h2><h3 id="8-1-远程仓库概述"><a href="#8-1-远程仓库概述" class="headerlink" title="8.1 远程仓库概述"></a>8.1 远程仓库概述</h3><p>远程仓库实绩上就是位于服务器上的仓库，它能在远端保存我们的版本历史，并且实现多人同时合作编写项目，每个人都能够同步他人的版本，能够看到他人的版本提交，相当于将我们的代码放在服务器上进行托管。</p>
+<h3 id="8-2-Github和Bitbacket"><a href="#8-2-Github和Bitbacket" class="headerlink" title="8.2 Github和Bitbacket"></a>8.2 Github和Bitbacket</h3><p>托管 Git 仓库最受欢迎的网站是 GitHub 和Bitbucket。：GitHub 为开源项目提供无限量的免费仓库,但私有仓库收费;而 Bitbucket 提供了无限量的私有仓库,仅当协作者超过一定数量时才收费。选择哪个网站,取决于具体的需求。在学习ruby on rails的教程中作者将代码托管在了Bitbucket上面，所以我也申请了一个账号试试。觉得用户体验还是很棒的。跟github很像，界面也十分友好。这是一个免费托管私人仓库的好地方。</p>
+<h3 id="8-3-公有和私有远程仓库"><a href="#8-3-公有和私有远程仓库" class="headerlink" title="8.3 公有和私有远程仓库"></a>8.3 公有和私有远程仓库</h3><p>远程仓库有公有和私有的，公有的远程仓库有GitHub，码云，Coding等，他们都是对外开放的，我们注册账号之后就可以使用远程仓库进行版本控制，其中最大的就是GitHub，但是它服务器在国外，国内链接可能会有一点卡。私有一般是GitLab这种自主搭建的远程私服，在公司中比较常用，我们公司的项目就是托管在GitLab上，使用局域网搭建的一个远程仓库，它只对公司内部开放，不对外开放。</p>
+<h3 id="8-9-将自己的项目conmmit到本地仓库以后push到远程仓库"><a href="#8-9-将自己的项目conmmit到本地仓库以后push到远程仓库" class="headerlink" title="8.9 将自己的项目conmmit到本地仓库以后push到远程仓库"></a>8.9 将自己的项目conmmit到本地仓库以后push到远程仓库</h3><h3 id="1、完成本地提交"><a href="#1、完成本地提交" class="headerlink" title="1、完成本地提交"></a>1、完成本地提交</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -a -m <span class="token string">'提交描述'</span>
+<span class="token function">git</span> log --oneline --all --graph<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="2、让本地仓库知道远程仓库的存在-本地仓库绑定远程仓库"><a href="#2、让本地仓库知道远程仓库的存在-本地仓库绑定远程仓库" class="headerlink" title="2、让本地仓库知道远程仓库的存在(本地仓库绑定远程仓库)"></a>2、让本地仓库知道远程仓库的存在(本地仓库绑定远程仓库)</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token function">add</span> origin https地址  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="3、push到远程仓库"><a href="#3、push到远程仓库" class="headerlink" title="3、push到远程仓库"></a>3、push到远程仓库</h3><p>语法格式：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push 远程仓库分支 本地分支名称<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>具体命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push origin maser<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4、本地绑定远程"><a href="#4、本地绑定远程" class="headerlink" title="4、本地绑定远程"></a>4、本地绑定远程</h3><p>我们可以将远端和本地的分支进行绑定，绑定后就不需要指定分支名称了</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> Push--set-upstream yecode master:master
+<span class="token function">git</span> push yecode<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>在一个本地仓库对应一个远程仓库的下，远程仓库基本上就是纯粹的代码托管了，类似于云盘那种感觉，存你的代码。</p>
+<h2 id="九、克隆项目"><a href="#九、克隆项目" class="headerlink" title="九、克隆项目"></a>九、克隆项目</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https地址<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="十、抓取、拉取和冲突解决"><a href="#十、抓取、拉取和冲突解决" class="headerlink" title="十、抓取、拉取和冲突解决"></a>十、抓取、拉取和冲突解决</h2><p>比如程序员A完成了他的模块，那么他就可以提交代码并推送到远程仓库，这时程序员B也要开始写代码了，由于远程仓库有其他程序员提交的记录，因此程序员B的本地仓库就和远程仓库不一致，就需要先进行pull操作，获取远程仓库最新的提交：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch   <span class="token comment">#抓取：只获取但是不会合并远端分支，后面需要我们手动合并并提交</span>
+<span class="token function">git</span> pull     <span class="token comment">#拉取：获取+合并</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+<p>如果存在不协调的地方，比如本地有两个仓库，一个仓库去修改hello.txt并直接提交，另一个仓库也修改hexllo.txt并直接提交，会报错</p>
+<p>一旦一一个本地仓库推送了代码，那么另一个本地仓库的推送会被拒绝，原因是当前文件已经被其他的推送给修改了，我们这边相当于是另一个版本，和之前两个分支合并一样，产生了冲突，因此我们只能去解决冲突问题。</p>
+<p>如果远程仓库中的提交和本地仓库的提交没有去编写同一个文件，那么就可以直接拉取：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull 远程仓库<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -592,7 +590,7 @@ tips:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/04/25/hello-world/">http://example.com/2022/04/25/hello-world/</a>
+                    <a href="http://example.com/2022/04/28/xue-xi-git-bi-ji/">http://example.com/2022/04/28/xue-xi-git-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +628,12 @@ tips:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
                                 </a>
                             
                         </div>
@@ -805,9 +807,10 @@ tips:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/04/28/xue-xi-git-bi-ji/">
                     <div class="card-image">
@@ -825,9 +828,9 @@ tips:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -836,6 +839,7 @@ tips:
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -855,7 +859,7 @@ tips:
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/04/25/hello-world/">
@@ -885,7 +889,6 @@ tips:
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
